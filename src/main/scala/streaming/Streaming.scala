@@ -1,7 +1,7 @@
 package streaming
 
-import scala.language.higherKinds
+import monix.reactive.Observable
 
-trait Streaming[Result[_]] {
-  def from(a: Int): Result[String]
+trait Streaming {
+  def from(a: Int): Observable[String]
 }

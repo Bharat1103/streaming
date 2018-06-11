@@ -17,7 +17,7 @@ object Libs {
 }
 
 object Covenant {
-  val Version = "271d249"
+  val Version = "observable-SNAPSHOT"
 
   val `covenant-http` = dep(
     "com.github.cornerman.covenant" %%% "covenant-http" % Version)
