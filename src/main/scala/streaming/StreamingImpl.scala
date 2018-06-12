@@ -7,6 +7,9 @@ import scala.concurrent.duration.DurationLong
 object StreamingImpl extends Streaming {
   override def from(a: Int): Observable[String] = {
     val iterator = Iterator.from(a).map(_.toString)
-    Observable.fromIterator(iterator).delayOnNext(1.second)
+    Observable.fromIterator(iterator).delayOnNext(1.second).map { x =>
+      println(x)
+      x
+    }
   }
 }
